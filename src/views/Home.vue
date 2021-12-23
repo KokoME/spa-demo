@@ -6,11 +6,15 @@
 </template>
 
 <script>
+import Nprogress from 'nprogress'
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
+  async created(){
+    Nprogress.done();
+  },
   components: {
     HelloWorld
   }

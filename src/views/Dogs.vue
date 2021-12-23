@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import Nprogress from 'nprogress'
 import axios from 'axios'
 export default {
   name: 'Dogs',
@@ -17,6 +18,7 @@ export default {
   async created(){
     let response = await axios.get('https://dog.ceo/api/breeds/image/random');
     this.dogOfDay = response.data;
+    Nprogress.done();
   }
 }
 </script>

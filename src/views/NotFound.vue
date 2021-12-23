@@ -5,7 +5,11 @@
 </template>
 
 <script>
+import Nprogress from 'nprogress'
 export default {
   name: 'NotFound',
+  async created(){
+    Nprogress.done();
+  }
 }
 </script>
